@@ -5,7 +5,11 @@
 - This version is also deployed in Vercel
 - The link to open the Front-End in Public Internet is https://cafe-fausse-sigma.vercel.app.
 
-## Front-End Composistion
+## Front-End Composition
 
 - Front-End uses vite and JSX, HTML, CSS. 
 - It uses oxlint for linting. 
+
+## Back-End Composition
+
+- TBA
