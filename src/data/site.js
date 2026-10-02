@@ -23,4 +23,5 @@ export const images = {
   plated: unsplash("1547592180-85f173990554"),
   kitchen: unsplash("1533777857889-4be7c70b33f7"),
   team: unsplash("1544148103-0773bf10d330"),
+  macarons: unsplash("1560632149-61fa3bb90c91"),
 };

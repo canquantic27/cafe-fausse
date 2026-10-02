@@ -10,6 +10,7 @@ const photos = [
   { src: images.interior, alt: "Bright restaurant interior with wooden tables", caption: "Plenty of space for families and groups" },
   { src: images.plated, alt: "A beautifully plated dish", caption: "Fresh from the kitchen" },
   { src: images.kitchen, alt: "Chefs at work in the kitchen", caption: "Our chefs at work" },
+  { src: images.macarons, alt: "Colourful French macarons beside a gift box", caption: "Sweet treats from our pastry kitchen" },
 ];
 
 export default function Gallery() {
