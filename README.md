@@ -1,4 +1,4 @@
-# My First repo for my course MS in AI & Engineering @ Quantic
+# MSAIE@Quantic - Cafe Fausse, Full-stack Web Application designed for a Project for the course on Web Application & Interface Design. 
 ## This is the Project Work of the Course Web Application Design + Interface Design - Creating a Full Stack Web Application for the French Restuarant Cafe Fausse
 
 - This uses the Quantic's AI Advisor Bot generated Front-End code using vite for the Front-End. This contains only the Front-End now. Back-End will be added later.
@@ -12,4 +12,6 @@
 
 ## Back-End Composition
 
-- TBA
+- Uses Flask API Calls
+- Has a /reservation API to do reservation of Tables
+- Has a /newsletter API to get email from Customers to subscribe to Cafe-Fausse newsletters
