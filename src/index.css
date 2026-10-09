@@ -201,7 +201,8 @@ button { cursor: pointer; }
 .gallery-item span { position: absolute; left: 20px; bottom: 18px; color: white; opacity: 0; text-transform: uppercase; font-size: .68rem; letter-spacing: .12em; transition: opacity .3s; }
 .gallery-item:hover span { opacity: 1; }
 .gallery-1 { grid-row: span 2; }
-.gallery-4 { grid-column: span 2; }
+.gallery-4,
+.gallery-6 { grid-column: span 2; }
 
 .modal-backdrop { position: fixed; inset: 0; z-index: 50; padding: 5vw; display: grid; place-items: center; background: rgba(0,0,0,.83); }
 .image-modal { position: relative; max-width: 900px; max-height: 90vh; color: white; text-align: center; }
@@ -230,7 +231,8 @@ footer p { color: #c4beb5; font-size: .86rem; line-height: 1.75; }
   .reservation-image { min-height: 390px; }
   .reservation-form-wrap { padding: 55px 8vw; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 190px; }
-  .gallery-4 { grid-column: span 1; }
+  .gallery-4,
+  .gallery-6 { grid-column: span 1; }
   footer { grid-template-columns: 1fr 1fr; }
 }
 
@@ -241,6 +243,7 @@ footer p { color: #c4beb5; font-size: .86rem; line-height: 1.75; }
   .two-columns { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-1 { grid-row: span 1; }
+  .gallery-6 { grid-column: span 1; }
   footer { grid-template-columns: 1fr; }
   .owners { flex-direction: column; }
 }
