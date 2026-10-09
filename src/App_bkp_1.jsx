@@ -295,49 +295,18 @@ function Reservations() {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
 
-const submitReservation = async (event) => {
-  event.preventDefault();
-  setMessage("");
+  const submitReservation = (event) => {
+    event.preventDefault();
 
-  if (!form.name || !form.email || !form.date || !form.time) {
-    setMessage("Please complete all required fields.");
-    return;
-  }
-
-  try {
-    const response = await fetch("http://127.0.0.1:5001/api/reservations", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
-
-    const result = await response.json();
-
-    if (!response.ok) {
-      setMessage(result.error || "Unable to create your reservation.");
+    if (!form.name || !form.email || !form.date || !form.time) {
+      setMessage("Please complete all required fields.");
       return;
     }
 
     setMessage(
-      `${result.message} Your assigned table number is ${result.table_number}.`
+      `Thank you, ${form.name}. Your reservation request for ${form.guests} guest(s) has been received.`
     );
-
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      date: "",
-      time: "",
-      guests: "2",
-    });
-  } catch (error) {
-    setMessage(
-      "Unable to reach the reservation service. Please try again shortly."
-    );
-  }
-};
+  };
 
   return (
     <section className="reservation-layout">
@@ -473,39 +442,17 @@ function Newsletter() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-const signUp = async (event) => {
-  event.preventDefault();
-  setMessage("");
+  const signUp = (event) => {
+    event.preventDefault();
 
-  if (!email.includes("@")) {
-    setMessage("Please enter a valid email address.");
-    return;
-  }
-
-  try {
-    const response = await fetch("http://127.0.0.1:5001/api/newsletter", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    });
-
-    const result = await response.json();
-
-    if (!response.ok) {
-      setMessage(result.error || "Unable to save your signup.");
+    if (!email.includes("@")) {
+      setMessage("Please enter a valid email address.");
       return;
     }
 
-    setMessage(result.message);
+    setMessage("Thank you—welcome to the Café Fausse table.");
     setEmail("");
-  } catch (error) {
-    setMessage(
-      "Unable to reach the newsletter service. Please try again shortly."
-    );
-  }
-};
+  };
 
   return (
     <section className="newsletter">

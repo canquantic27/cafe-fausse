@@ -1,0 +1,16 @@
+In Root Folder
+Npm run dev << to start the Local Server
+
+In ./backend/ folder
+Switch to the Python Environment - It is .venv here
+Py app.py
+
+SELECT
+  c.customer_name,
+  c.customer_email,
+  r.time_slot,
+  r.guest_count,
+  r.table_number
+FROM reservations r
+JOIN customers c ON c.customer_id = r.customer_id
+ORDER BY r.created_at DESC;
